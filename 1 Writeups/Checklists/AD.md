@@ -1,0 +1,21 @@
+- [ ] Scan all TCP ports
+- [ ] Check LDAP, RPC, SMC with anonymous access. Check for public share (nxc-sweep)
+- [ ] Find usernames: if you get access, look for usernames with stuff like netexec --rid-brute, --users, and enumdomuser with rpcclient to get lsit of users in domain without needed inital credentials. Check usernames with kerbrute
+- [ ] Test for ASREP-Roasting after you have collected unsermames. If succesfull, try cracking
+- [ ] Check for kerberoasting after you hace a username and passwd
+- [ ] Try authenticating with every possible protocol with those creds. WinRM, RDP, MSSQL, SMB, RPC, LDAP. (Use nxc-sweep to automate)
+- [ ] Enumerate shares for every user you get access to. Every new user means tou should recheck thei shares.
+- [ ] If you get shell as a user, check for privesc, and dump all hashes and collect them in a file for possible bruteforcing and lateral movement
+- [ ] Run bloodhound and check for attack paths, roasting and DCsync
+- [ ] Check for Certificate based attacks with certipy
+- [ ] Check if writable share could be a path to steal hashes with responder
+- [ ] Remember to bruteforce different protocols with credentials you hace. Try pass-the-hash
+- [ ] For port exploitation dump all hashes using netexec and/or mimikatx
+- [ ] Check UDP ports
+- [ ] mimikatz pass-the-ticket, golden ticket, silver ticket for lateral movement
+- [ ] admin history and recycle bin. Run Credshunter as post-admin access
+- [ ] `net user` to reveal local users. Spray creds other targets with --local-auth
+- [ ] share write access? Run responder and capture hashes
+- [ ] spray creds with --local-auth flag
+- [ ] rescan if you're stuck, verify tools are working properly and you'are running them properly
+- [ ] silver ticket? Pass-the-ticket?
